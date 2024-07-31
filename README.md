@@ -1,3 +1,6 @@
+In progress!!!!!!!!!!!! No code inside
+
+
 Callendar-Van Dusen Coefficients Calculator
 This repository contains a Python program designed to calculate the coefficients of a calibrated Pt100 temperature sensor using the Callendar-Van Dusen equation. The program accepts at least three temperature and resistance values as input and outputs the corresponding coefficients.
 
