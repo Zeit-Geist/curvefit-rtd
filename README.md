@@ -1,5 +1,7 @@
 In progress!!!!!!!!!!!! No code inside
 
+Disclaimer
+This software is provided "as is", without warranty of any kind. The author assumes no liability for errors or any damages resulting from the use of this software.
 
 Callendar-Van Dusen Coefficients Calculator
 This repository contains a Python program designed to calculate the coefficients of a calibrated Pt100 temperature sensor using the Callendar-Van Dusen equation. The program accepts at least three temperature and resistance values as input and outputs the corresponding coefficients.
@@ -15,16 +17,23 @@ NumPy
 
 Input
 
-![image](https://github.com/user-attachments/assets/f337e609-6c2d-43c5-a788-f6aeeb8c96fc)
+![image](https://github.com/user-attachments/assets/bdb1b192-f94c-4304-af81-5b87f8199acd)
+
+2 Probes with serialnumber,test temperature, measuring uncertainty and measured resistance of the probes.
+Values of the first probe are the test values of the DKD-R- 5-6 directive table 6.3
 
 Output
 
 xlsx file 
 
-![image](https://github.com/user-attachments/assets/62b4f017-9dc1-4ab5-abf9-f8dcae80d964)
+![image](https://github.com/user-attachments/assets/24fe1766-feaf-4777-a0f4-e517f47e0745)
+
+and in this case 4 jpg files.
+
+![image](https://github.com/user-attachments/assets/fa778e67-8fd2-459f-a29c-0a82c133aa5d)
 
 
-.. code-block:: python
+
 
     if __name__ == "__main__":
         directory = "C:\\Test\\" 
@@ -59,3 +68,5 @@ xlsx file
         cf.to_excel(path_output, index = True , sheet_name = 'sheet')
     
         print ( strftime("%H:%M:%S"),  "  Programm Ende---------------------")    
+
+
