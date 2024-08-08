@@ -42,7 +42,6 @@ b_norm = -5.775e-7
 c_norm = -4.183e-12
 ro_norm_neg = 0.0
 
-#messwert = {}
 
 #######################################################################################################
 ### Pandas Frame wird in  zwei Dictionarys übertragen 
@@ -118,7 +117,7 @@ def tabel_cvd(df) :
 
 
         #Messwerte werden auf Variablen aufgeteilt negativ Positiv
-            #print(posi)
+
             t=[]
             r=[]
             t_n = []
@@ -129,7 +128,7 @@ def tabel_cvd(df) :
             for negwert in negi:
                 t_n.append(negwert[0])  
                 r_n.append(negwert[1])   
-            #print(t)
+
             y1 = np.array(r)
             y2 = np.array(r_n)
             comboY = np.append(y1,y2)
@@ -147,9 +146,9 @@ def tabel_cvd(df) :
             else:
                 c_neg.append(0.0)       
 
-    #dict ={'Seriennummer':sn, 'R0':ro_pos,'A':a_pos,'B':b_pos,'C':c_neg}    
+
     cf = pd.DataFrame({'Seriennummer':sn, 'R0':ro_pos,'A':a_pos,'B':b_pos,'C':c_neg})
-    #cf['Seriennummer'] = cf['Seriennummer'].astype(int)
+
     
     results= pd.merge(df,cf, sort= True)
     cf = cf.set_index('Seriennummer')
@@ -520,6 +519,7 @@ def graphen(multi,din_class,ro_norm_neg):
 #########################################################################################################################
 #########################################################################################################################
 
+
 if __name__ == "__main__":
     directory = "C:\\Test\\" 
     file_name = 'test'
@@ -541,7 +541,7 @@ if __name__ == "__main__":
     if os.path.exists(directory + file_name + '.xlsx') == 1:
         path_input = directory + file_name + r'.xlsx'
         print(str(path_input) +' wurde gelesen.')
-    path_output = directory + file_name + ' coeff'+ r'.xls'
+    path_output = directory + file_name + ' coeff'+ r'.xlsx'
 
     df = pd.read_excel(path_input,header = None)
     #df[0] =df.astype(str)        # Serien nummer in string                   
@@ -555,7 +555,7 @@ if __name__ == "__main__":
     print ( strftime("%H:%M:%S"),  "  Programm Ende---------------------")    
 
 
-##funzt nicht mit meheren sheets
+
 
 
 # %%
